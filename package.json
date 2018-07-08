@@ -8,7 +8,7 @@
     "start-dev": "babel-node server/index.js --watch",
     "build": "webpack -d",
     "build-dev": "webpack -d --watch",
-    "start-react": "live-server babel-node --entry-file=client/dist/index.html",
+    "start-react": "cd ./client/dist; live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
