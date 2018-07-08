@@ -6,17 +6,14 @@ import PropTypes from 'prop-types'
 import DynamicInput from './DynamicInput.jsx';
 
 export default class Form extends Component {
-  static propTypes = {
-    inputs: PropTypes.arrayOf(PropTypes.object)
-  }
   constructor(props) {
     super(props)
-  
+    
     this.state = {
-       response: {}
+      response: {}
     }
   }
-
+  
   changeResponse(val) {
     return (e) => {
       this.setState(prevState => {
@@ -26,7 +23,7 @@ export default class Form extends Component {
     }
   }
   
-
+  
   render() {
     return (
       <form>
@@ -34,4 +31,8 @@ export default class Form extends Component {
       </form>
     );
   }
+}
+
+Form.propTypes = {
+  inputs: PropTypes.arrayOf(PropTypes.object)
 }
